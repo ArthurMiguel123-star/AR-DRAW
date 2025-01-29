@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bem-vindo ao Nosso App</title>
+    <link rel="shortcut icon" href="images/App.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Nosso Aplicativo!</h1>
+    </header>
+
+    <section>
+        <h2>Faça o Download Agora</h2>
+        <p>Baixe o nosso aplicativo para aproveitar todos os benefícios.</p>
+        <a href="assets/App (2).apk" class="baixar">Baixar Meu App 1.5</a>
+    </section>
+
+    <footer>
+        <p>Ao baixar o app, você concorda com os nossos <a href="terms.html">Termos de Uso</a> e a nossa <a href="privacy.html">Política de Privacidade</a>.</p>
+    </footer>
+    <script>
+        const baixar = document.getElementById("baixar").addEventListener("click", function() {
+            const link = document.createElement("a");
+            link.href = "assets/App (2).apk"; // Substitua pelo caminho correto do seu arquivo APK
+            link.download = "assets/App (2).apk";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+</html>
